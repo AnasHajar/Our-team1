@@ -3,7 +3,7 @@
     skel.init({
         reset: 'full',
         breakpoints: {
-            global: { href: 'css/style.css', containers: 1400, grid: { gutters: ['2em', 0] } },
+         // #Edit  global: { href: 'css/style.css', containers: 1400, grid: { gutters: ['2em', 0] } },
             xlarge: { media: '(max-width: 1680px)', href: 'css/style-xlarge.css', containers: 1200 },
 
         },
