@@ -1,6 +1,48 @@
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+(function ($) {
 
+    skel.init({
+        reset: 'full',
+        breakpoints: {
+            global: { href: 'css/style.css', containers: 1400, grid: { gutters: ['2em', 0] } },
+            xlarge: { media: '(max-width: 1680px)', href: 'css/style-xlarge.css', containers: 1200 },
+            large: { media: '(max-width: 1280px)', href: 'css/style-large.css', containers: 960, grid: { gutters: ['1.5em', 0] }, viewport: { scalable: false } },
+            medium: { media: '(max-width: 980px)', href: 'css/style-medium.css', containers: '90%', grid: { zoom: 2 } },
+            small: { media: '(max-width: 736px)', href: 'css/style-small.css', containers: '90%!', grid: { gutters: ['1.25em', 0], zoom: 3 } },
+            xsmall: { media: '(max-width: 480px)', href: 'css/style-xsmall.css' }
+        },
+        plugins: {
+            layers: {
 
-///comemnt
+                // Config.
+                config: {
+                    transformTest: function () { return skel.vars.isMobile; }
+                },
+
+                // Navigation Button.
+                navButton: {
+                    breakpoints: 'medium',
+                    height: '4em',
+                    html: '<span class="toggle" data-action="toggleLayer" data-args="navPanel"></span>',
+                    position: 'top-left',
+                    side: 'top',
+                    width: '6em'
+                },
+
+                // Navigation Panel.
+                navPanel: {
+                    animation: 'overlayX',
+                    breakpoints: 'medium',
+                    clickToHide: true,
+                    height: '100%',
+                    hidden: true,
+                    html: '<div data-action="navList" data-args="nav"></div>',
+                    orientation: 'vertical',
+                    position: 'top-left',
+                    side: 'left',
+                    width: 250
+                }
+
+            }
+        }
+    });
+})
