@@ -31,7 +31,7 @@ select.form-control {
 /*
 *
 * ==========================================
-* for 
+* for contact us 
 * ==========================================
 */
 
@@ -65,6 +65,18 @@ select.form-control {
     border-radius: 0
 }
 
+.button {
+   
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
 .form-control::-moz-placeholder,
 .form-group .form-control::-moz-placeholder {
     color: #BDBDBD;
