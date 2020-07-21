@@ -10,9 +10,9 @@ Teaching programming courses through videos
 T4 
 Project Name:Our-team1 
 
-M1:Youssef Shaqroon  
-M2:Anas Hajar  
-M3:Mohammed Almuylabi 
+M1:Youssef Shaqroon HTML
+M2:Anas Hajar CSS & Bootstrap 
+M3:Mohammed Almuylabi JavaScript
 
 
 
