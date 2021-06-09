@@ -18,6 +18,7 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+
 		<!--JS Jquery-->
 		<script src="jquery.min.js"></script>
 		<script src="jquery.dropotron.min.js"></script>
@@ -187,7 +188,24 @@
 		<span class="copyright">
 			&copy; Copyright. All rights reserved. Design by <a href="index.html" >A.M.Y Group</a>
 		</span>
+
+		<p id="myparag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, atque? Nisi corrupti unde minus! Maxime magni beatae voluptas earum perferendis quod perspiciatis quia, accusamus libero, neque nisi ea error ducimus ab maiores praesentium deleniti exercitationem provident, laborum autem eum id! Laboriosam praesentium repudiandae sit optio quae molestias, natus et tempore!</p>
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, qui.</p>
+
 	</footer>
+
+	<script>
+		$( document ).ready( function() {
+			console.log( "welcome" );		
+		});
+
+		//Example 
+		$("#myparag").click( function(e) {
+			$(this).hide();
+		});
+
+	</script>
+		
 	  
 	</body>
 </html>

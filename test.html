@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, harum eaque dolore reprehenderit magnam soluta tempora perspiciatis non, odio quam numquam sapiente quis voluptatum veniam at unde asperiores adipisci quo perferendis, dolorem magni labore rem. Doloribus, tempore. Laudantium obcaecati accusantium nemo id consequuntur tempore. Magnam veritatis pariatur repellendus reiciendis corporis!</p>
+  <button id="myButton">Click me</button>
+  
+  <button id="myButton2">Click me</button>
+
+  <div id="feedBack">
+    here is my feed back
+  </div>
+
+<script>
+
+  $("#myButton").click(function (){
+        $.ajax({
+           type: 'GET',
+           url: 'https://reqres.in/api/users/2',
+        })
+        .done( function(resp) { 
+            $('#feedBack').text( resp.data.email  );
+            $('#feedBack').after( `<img src='${resp.data.avatar}'>`)
+          } )
+        .fail()
+        .always();
+  });
+    
+
+
+  $("#myButton2").click( function ()
+  {
+  $.ajax({
+       type: 'GET',
+       url: 'https://reqres.in/api/users/2',
+  }).done( function(resp) { 
+      myhtml = `
+      <div class="card" style="margin: 15px"> 
+      <h5 class="card-header">
+        <img src="${resp.data.avatar}" alt="" height="50" width="50">
+        ${resp.data.id}
+      </h5>
+      <div class="card-body">
+        <p class="card-text">${resp.data.first_name}</p> 
+        <p class="card-text">${resp.data.email}</p> 
+      </div>
+      </div>`
+        $("#feedBack").html(myhtml) 
+      });
+  });
+    
+</script>
+
+  
+</body>
+</html>
