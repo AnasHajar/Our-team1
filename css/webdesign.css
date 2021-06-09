@@ -2,9 +2,7 @@
 @import url(font-awesome.min.css);
 @import url("http://fonts.googleapis.com/css?family=Lato:300,700");
 
-.responsivetext {
-	font-size: 18px;
-	}
+
 	body {
 		background: #fff;
 	}
@@ -1224,7 +1222,7 @@
 	#banner {
 		background-attachment: scroll,						fixed;
 		background-color: #494d53;
-		background-image: url("images/overlay.png"), url("images/banner.jpg");
+		background-image: url("images/overlay.png"), url("../images/banner.jpg");
 		background-position: top left,					center center;
 		background-repeat: repeat,						no-repeat;
 		background-size: auto,						cover;
