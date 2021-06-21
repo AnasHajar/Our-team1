@@ -1,0 +1,76 @@
+{%extends "layout.html"%}
+
+{%block content%}
+
+<center><img src="https://www.vwfs.co.in/content/dam/bluelabel/valid/www-vwfs-co-in/images/Contact%20us-%202-1%20-%203000%20px%20X%201500px.jpg.xxl.jpg"alt="width="300" height="200"></center>
+  
+  <section class="Material-contact-section section-padding section-dark">
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                <h1 class="section-title">Love to Hear From You</h1> 
+            </div>
+        </div>
+        <div class="row">
+      
+            <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+              <p>We always strive to hear from you and your suggestion that develops from our site. You can choose subject and write a letter containing your suggestions.</p>
+
+              <div class="find-widget">
+               <h5><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg>Address:Jeddah city-Alnaseem neighborhood</h5>
+              </div>
+              <div class="find-widget">
+                <h5><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+                  </svg>Phone:+966556834444</h5>
+              </div>
+              
+              <div class="find-widget">
+                <h5><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                  </svg>mail:A.M.Y@gmail.com</h5>
+              </div>
+              
+            </div>
+            <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+                <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+                    
+                    <div class="form-group label-floating">
+                      <label class="control-label" for="name">Name</label>
+                      <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    
+                    <div class="form-group label-floating">
+                      <label class="control-label" for="email">Email</label>
+                      <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+                      <div class="help-block with-errors"></div>
+                    </div>
+               
+                    <div class="form-group label-floating">
+                      <label class="control-label">Subject</label>
+                      <input class="form-control" id="msg_subject" type="text" name="subject" required data-error="Please enter your message subject">
+                      <div class="help-block with-errors"></div>
+                    </div>
+               
+                    <div class="form-group label-floating">
+                        <label for="message" class="control-label">Message</label>
+                        <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                 
+                    <div class="form-submit mt-5">
+                        <button class="button">Send Message</button>
+                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  {%endblock content%}
