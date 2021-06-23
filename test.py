@@ -93,6 +93,10 @@ def users():
 
 
 
+@app.errorhandler(404)
+def err_404(error):
+   return render_template( '404.html' ), 404
+
 if __name__ == '__main__':
     # Debug Mode
     app.run(debug=True)
@@ -100,3 +104,5 @@ if __name__ == '__main__':
     #p= os.environ.get('PORT')
     #p='5000' if p == None else p
     #serve(app,host='0.0.0.0', port=p)
+
+
