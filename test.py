@@ -1,7 +1,11 @@
 from flask import Flask, render_template,request,session, url_for,redirect
+from flask_mail import Mail, Message
+from waitress import serve
 import secrets 
 import os
 secrets.token_hex(16)
+
+
 
 
 app = Flask(__name__)
@@ -97,6 +101,29 @@ def users():
 def err_404(error):
    return render_template( '404.html' ), 404
 
+
+
+# email configeration
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_USERNAME'] = 'anashajr67@gmail.com'
+app.config['MAIL_PASSWORD'] = 'zzdxafrrjeycocrx'
+ 
+mail = Mail(app)
+
+# for handle email (contact_us)
+@app.route('/handle_email',methods=['GET','POST'])
+def handle_email():
+    nam = request.form['name']
+    email = request.form['email']
+    subject= request.form['subject']
+    msg=Message(f"Message {email}",recipients=['anashajr67@gmail.com'],sender=email)
+    msg.body= f''' {nam} said {subject} '''
+    mail.send(msg)
+    return render_template('index.html')
+
+
 if __name__ == '__main__':
     # Debug Mode
     app.run(debug=True)
@@ -104,5 +131,3 @@ if __name__ == '__main__':
     #p= os.environ.get('PORT')
     #p='5000' if p == None else p
     #serve(app,host='0.0.0.0', port=p)
-
-
