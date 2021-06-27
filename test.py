@@ -126,8 +126,8 @@ def handle_email():
 
 if __name__ == '__main__':
     # Debug Mode
-    app.run(debug=True)
+    #app.run(debug=True)
     # production mode 
-    #p= os.environ.get('PORT')
-    #p='5000' if p == None else p
-    #serve(app,host='0.0.0.0', port=p)
+    p= os.environ.get('PORT')
+    p='5000' if p == None else p
+    serve(app,host='0.0.0.0', port=p)
