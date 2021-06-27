@@ -38,7 +38,7 @@ def contact_us():
 def csscourse():
     return render_template('csscourse.html')
 
-    
+    # courser
 
 @app.route("/htmlcoures.html")
 @app.route("/htmlcoures.html")
